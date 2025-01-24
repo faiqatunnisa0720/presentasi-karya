@@ -1,0 +1,229 @@
+<html>
+<head>
+    <title>Data Buku</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .header a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .btn-add {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn-add i {
+            margin-right: 5px;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        table th {
+            background-color: #f9f9f9;
+            font-weight: 500;
+        }
+        table th i {
+            margin-left: 5px;
+            color: #ccc;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .pagination span {
+            font-size: 14px;
+        }
+        .pagination .page-numbers {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .pagination .page-numbers li {
+            margin: 0 5px;
+        }
+        .pagination .page-numbers li a {
+            text-decoration: none;
+            color: #3498db;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .pagination .page-numbers li a.active {
+            background-color: #3498db;
+            color: #fff;
+        }
+        .btn-edit, .btn-delete {
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn-edit {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .btn-delete {
+            background-color: #dc3545;
+            color: #fff;
+        }
+        .search-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+        .search-container input {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 20px;
+            }
+            .btn-add {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+            table th, table td {
+                padding: 8px;
+            }
+            .pagination span {
+                font-size: 12px;
+            }
+            .pagination .page-numbers li a {
+                padding: 4px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Data Buku</h1>
+            <a href="#"><i class="fas fa-home"></i> Si Perpustakaan</a>
+        </div>
+        <button class="btn-add"><i class="fas fa-plus"></i> Tambah Data</button>
+        <div class="search-container">
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search">
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No <i class="fas fa-sort"></i></th>
+                        <th>Id Buku <i class="fas fa-sort"></i></th>
+                        <th>Judul Buku <i class="fas fa-sort"></i></th>
+                        <th>Pengarang <i class="fas fa-sort"></i></th>
+                        <th>Penerbit <i class="fas fa-sort"></i></th>
+                        <th>Tahun <i class="fas fa-sort"></i></th>
+                        <th>Kelola</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>B001</td>
+                        <td>Matematika</td>
+                        <td>anastasya</td>
+                        <td>armi print</td>
+                        <td>2010</td>
+                        <td>
+                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>B002</td>
+                        <td>RPL 2</td>
+                        <td>Eko</td>
+                        <td>UMK</td>
+                        <td>2020</td>
+                        <td>
+                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>B003</td>
+                        <td>C++</td>
+                        <td>Anton</td>
+                        <td>Toni Perc</td>
+                        <td>2010</td>
+                        <td>
+                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>B004</td>
+                        <td>CI 4</td>
+                        <td>anastasya</td>
+                        <td>armi print</td>
+                        <td>2009</td>
+                        <td>
+                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination">
+            <span>Showing 1 to 4 of 4 entries</span>
+            <ul class="page-numbers">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#" class="active">1</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

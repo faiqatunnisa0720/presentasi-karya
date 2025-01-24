@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman Buku Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #673AB7;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #673AB7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #5e35b1;
+        }
+
+        .step {
+            margin-top: 20px;
+        }
+
+        .confirmation {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border: 1px solid #4CAF50;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .confirmation h2 {
+            color: #4CAF50;
+        }
+
+        .confirmation p {
+            margin: 10px 0;
+        }
+
+        .qr-code {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .book-list {
+            margin-top: 20px;
+        }
+
+        .book-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .book-item button {
+            background-color: #FF9800;
+        }
+
+        .book-item button:hover {
+            background-color: #fb8c00;
+        }
+
+        .history {
+            margin-top: 40px;
+        }
+
+        .history h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .history-table th, .history-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .history-table th {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Peminjaman Buku Online</h2>
+    </header>
+
+    <div class="container">
+        <h1>Langkah-Langkah Peminjaman Buku</h1>
+
+        <section class="step" id="registrasi">
+            <h2>1. Registrasi</h2>
+            <p>Isi formulir di bawah ini untuk registrasi:</p>
+            <form>
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+                <button type="submit">Registrasi</button>
+            </form>
+        </section>
+
+        <section class="step" id="pencarian">
+            <h2>2. Cari Buku</h2>
+            <p>Telusuri daftar buku yang tersedia:</p>
+            <div class="book-list">
+                <div class="book-item">
+                    <span>Buku 1</span>
+                    <button>Pilih Buku</button>
+                </div>
+                <div class="book-item">
+                    <span>Buku 2</span>
+                    <button>Pilih Buku</button>
+                </div>
+                <div class="book-item">
+                    <span>Buku 3</span>
+                    <button>Pilih Buku</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="step" id="konfirmasi">
+            <h2>3. Konfirmasi Pemesanan</h2>
+            <p>Detail pemesanan Anda:</p>
+            <div class="confirmation">
+                <h2>Pesanan Terkonfirmasi!</h2>
+                <p>Nama: [Nama Pengguna]</p>
+                <p>Email: [Email Pengguna]</p>
+                <p>Buku: [Judul Buku]</p>
+                <p>ID Pengambilan: <strong>123456789</strong></p>
+                <div class="qr-code">
+                    <p>Scan QR Code berikut untuk mengambil buku:</p>
+                    <img src="https://via.placeholder.com/150" alt="QR Code">
+                </div>
+                <p>Tanggal Pengambilan: [Tanggal]</p>
+                <button>Kembali ke Halaman Utama</button>
+            </div>
+        </section>
+
+        <section class="history">
+            <h2>Riwayat Peminjaman</h2>
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Judul Buku</th>
+                        <th>Tanggal Peminjaman</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Buku 1</td>
+                        <td>01-01-2025</td>
+                        <td>Sudah Dikembalikan</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Buku 2</td>
+                        <td>05-01-2025</td>
+                        <td>Belum Dikembalikan</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
