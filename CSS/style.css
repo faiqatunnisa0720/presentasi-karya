@@ -1259,23 +1259,33 @@ section{
     text-align: center;
    border: 1px solid;
     border-radius: 10px;
+    width: 100%;
 }
 
 .Tabel-Buku table {
     align-items: center;  
     text-align: center; 
+    width: 100%;
 
 }
 .Tabel-Buku table th {
     align-items: center; 
-    padding-top: 20px;  
+    padding: 20px;  
 }
 .Tabel-Buku table td{
     align-items: center;  
-    padding: 20px 43px; 
     text-align: center;
-    /*border: 1px solid; */
+    padding: 7px;
 } 
+.Tabel-Buku table td .nomor{
+    text-align: center;
+} 
+.Tabel-Buku table td img{
+    width: 80px;
+    height: auto;
+} 
+
+
 
 
 
