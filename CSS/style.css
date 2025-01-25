@@ -39,7 +39,7 @@ section{
    
 }
 .logo img {
-    width: 50px;
+    width: 60px;
     height: auto;
 }
 .logo{
@@ -113,7 +113,7 @@ section{
 /* Halaman Home  */
 
 #home{
-    background: url(../img/background.png);
+    background: url(../img/bacground_Home.png);
     height: 100vh;
     width: 100%;
     background-position: top right;
@@ -1118,8 +1118,19 @@ section{
     list-style: none;
     padding: 0;
 }
+
 .nav-dashboard li {
     padding: 10px 20px;
+}
+.nav-dashboard li select {
+    padding: 4px 0;
+    border: none;
+    text-decoration: none;
+    background-color: #343a40;
+    color: #fff;
+    border: #343a40 ;
+    font-size: 16px;
+    
 }
 .nav-dashboard li a {
     color: #fff;
@@ -1284,6 +1295,112 @@ section{
     width: 80px;
     height: auto;
 } 
+
+.btn-edit, .btn-delete {
+    border: none;
+    font-size: 14px;
+}
+
+.btn-edit {
+    background-color: #28a745;
+    color: #fff;
+}
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+
+.Tabel-Buku table td button{
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+} 
+
+/* Data Anggota */
+
+.content-Dataanggota{
+    padding: 20px;
+    align-items: center;
+    border: 1px solid;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.Judul-dataanggota{
+    font-family: var(--h2-font-family);
+    margin-bottom: 10px;
+}
+
+.AddDataanggota button{
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #4aa2ff;
+    color: white;
+    border: none;
+}
+
+.Search-Dataanggota{
+    padding: 15px;
+    align-items: end;
+    text-align: end;
+
+}
+
+.Tabel-anggota{
+    align-items: center;
+    text-align: center;
+   border: 1px solid;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.Tabel-anggota table {
+    align-items: center;  
+    text-align: center; 
+    width: 100%;
+
+}
+.Tabel-angggota table th {
+    align-items: center; 
+    padding:50px;  
+}
+.Tabel-anggota table td{
+    align-items: center;  
+    text-align: center;
+    padding: 10px;
+} 
+
+
+.Tabel-angggota table td img{
+    width: 80px;
+    height: auto;
+} 
+
+.btn-edit, .btn-delete, .btn-Print {
+    border: none;
+    font-size: 22px;
+    border-radius: 5px;
+}
+
+.btn-edit {
+    background-color: #28a745;
+    color: #fff;
+}
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+.btn-Print {
+    background-color: rgb(89, 205, 244);
+    color: #fff;
+}
+
+
+
+
+
 
 
 
