@@ -127,11 +127,14 @@ section{
     font-size: var(--p-font);
     padding-top: 40px;
     font-family: var(--h2-font-family);
+    font-weight: 800;
+    /* color: var(--second-bg-color); */
 }
 .tulisan h2{
     font-size: 3rem;
     padding-top: 20px;
     font-family: var(--h1-font-family);
+    color: white;
 }
 
 .tulisan_2{
@@ -141,6 +144,7 @@ section{
     font-size: 1.1rem;
     text-align: justify;
     padding-top: 28px;
+    color: white;
 
     
 }
@@ -252,7 +256,7 @@ section{
     margin: 20px 0px;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(2, 50% 50%);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 20px;
     
@@ -313,6 +317,7 @@ section{
   padding-top: 50px;
   background-color: var(--main-color);
 
+
 }
 
 .contact{
@@ -320,26 +325,25 @@ section{
     display: grid;
     gap: 20px;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
-    padding: 25px;
+    padding: 15px;
     border-radius: 20px;
 }
 
 .contact-main{
     display: grid;
-    grid-template-columns: repeat(2, 50% 50%);
-    gap: 30px;
-    padding: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
 
 }
 
 .contact-form{
-    display: block;
-    box-sizing: border-box;
-    padding: 40px;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+    width: 100%;
+    height: auto;
     gap: 5px;
    
 } 
@@ -404,8 +408,8 @@ section{
 
 }
 .contact-text{
-    padding: 40px 10px;
-    width: 400px;
+    padding: 40px 5px;
+    width: 100%;
     margin: 0 auto;
 }
 .contact-text p{
@@ -430,29 +434,35 @@ section{
 }
 
 .contact-text iframe{
-    width: 110%;
-    height: 70%;
+    width: 100%;
+    height: auto;
     
 }
 
 
 /* Halaman footer */
+
+#footer{
+    background-color: var(--other-color);
+
+}
+
 .footer-main{
     grid-template-columns: repeat(3, 30% 30% 40%);
     display: grid;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 20px;
     align-items: flex-start;
-    margin: 0 -100px;
     padding: 30px 80px;
-    background-color: var(--other-color);
+
 }
 
 
 .footer-logo img{
-    width: 100px;
-    height: 100px;
+    width: 30%;
+    height: 30%;
     align-items: center;
+
 
 }
 
@@ -486,6 +496,7 @@ section{
     color: #1e1e1e;
     margin-bottom: 10px; 
     font-size: 20px;
+    font-family: var(--h2-font-family);
 }
 
 .footer-media p, .footer-media a {
@@ -519,27 +530,6 @@ section{
 
 /* pendaftaran anggota */
 
-.header-pendaftaran{
-    grid-template-columns: repeat(3, 1fr);
-    display: grid;
-    gap: 20px;
-    align-items: center;
-    padding: 20px 30px;
-    background: var(--main-color);
-    
-}
-
-.header-logo{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.header-logo img{
-    width: 70px;
-    height: auto;
-}
-
 .header-logo p{
     font-family: "Oleo Script", serif;
     font-weight: 700;
@@ -551,6 +541,8 @@ section{
 
 .header-text{
     align-items: center;
+    text-align: center;
+    margin-top: 10%;
 }
 
 .header-text h4{
@@ -644,18 +636,18 @@ section{
 .login-container{
     background-image: url(../img/backgroundlogin.png);
     align-items: center;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
-    height: calc(100vh - 100px); /* Menghitung tinggi halaman dengan mengurangi header/footer */
+    height: calc(100vh - 10px); 
 }
 
 .login-box{
+    margin-top: 30%;
     align-items: center;
     border-radius: 30px;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
-    height: 400px;
-    width: 350px;
+    height: 100%;
+    width: 120%;
 }
 
 .login-box form{
@@ -664,11 +656,10 @@ section{
 
 .login-box form input{
     background: var(--other-color);
-    height: 20px;
+    height: 10%;
     width: 100%;
-    line-height: 20px;
     border-radius: 20px;
-    padding:  20px 20px;
+    padding:  20px;
     border: none;
     margin-bottom: 30px;
     color: var(--text-color);
@@ -701,7 +692,12 @@ section{
     padding-top: 20px;
 }
 
-/* HALAMAN BUKU */
+.login-form p{
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* HALAMAN BUKU CERITA/PELAJARAN*/
 
 .header-Book{
     padding: 20px 35px;
@@ -894,7 +890,6 @@ section{
 /* halaman layanan */
 
 #Services{
-    height: calc(100vh - 100px); /* Menghitung tinggi halaman dengan mengurangi header/footer */
     padding: 20px;
     background-color: var(--main-color);
     padding: 50px auto;
@@ -987,23 +982,18 @@ section{
 /* HALAMAN PEMINJAMAN BUKU */
 .container-Borrow{
     padding: 20px;
-    grid-template-columns: repeat(2, 80% 20%);
-    display: grid;
-    gap: 170px;
     background-color: var(--bg-color);
     border-radius: 10px;
     box-shadow: 0 0 5px 3px var(--text-color);
-    margin: 5px;
+    margin-top: 8%;
 }
 
-.book-container-borrow{
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 20px 20px;
-}
+
 
 .Header-Borrow{
-    width: 125%;
+    width: 100%;
     text-align: center;  
+    
 }
 .Header-Borrow h1{
     font-family: var(--h2-font-family);
@@ -1065,9 +1055,9 @@ section{
 }
 
 .search-bar {
-    display: flex;
-    justify-content: center;
     padding: 20px;
+    align-items: end;
+    text-align: end;
 }
 .search-bar input[type="text"] {
     width: 300px;
@@ -1085,7 +1075,7 @@ section{
 }
 .sidebar-dashboard {
     width: 230px;
-    background-color: #343a40;
+    background-color: var(--text-color);
     position: fixed;
     top: 0;
     bottom: 0;
@@ -1155,7 +1145,7 @@ section{
     padding: 20px;
 }
 .header-dashboard {
-    background-color: #28a745;
+    background-color: var(--text-color);
     color: #fff;
     padding: 20px 30px;
     display: flex;
@@ -1398,18 +1388,858 @@ section{
 }
 
 
+/* KONFORMASI PEMINJAMAN */
+
+#konformasi{
+    margin-top: 40px;
+}
+button {
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--main-color);
+    box-shadow: 5px 5px 10px var(--text-color);
+    color: var(--text-color);
+}
+
+.step {
+    margin-top: 10%;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+.confirmation {
+    margin: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border: 1px solid #4CAF50;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.confirmation h2 {
+    color: #4CAF50;
+}
+
+.confirmation p {
+    margin: 10px 0;
+}
+
+.qr-code {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+}
+
+#konfirmasi h2{
+    text-align: center;
+    font-family: var(--h2-font-family);
+}
 
 
 
 
 
 
+/* RESPONSIF */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background: var(--main-color);
+        position: absolute;
+        top: 70px; 
+        right: 20px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-icon i {
+        font-size: 2rem;
+        color: var(--text-color);
+    }
+}
 
 
 
+/* Responsive Home */
+@media (max-width: 1024px) {
+    #home {
+        background-position: center;
+        padding: 20px;
+    }
+
+    .tulisan h2 {
+        font-size: 2.5rem;
+    }
+
+    .tulisan_2 {
+        font-size: 1rem;
+        padding-top: 10px;
+    }
+}
 
 
+/* Responsif about */
+@media (max-width: 768px) {
+    #about {
+        margin: 10px 20px;
+        padding: 20px 20px;
+    }
 
+    .about-main {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 10px 0;
+    }
+
+    .about-text {
+        padding: 15px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .about-main img {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .about-us h2 {
+        font-size: 2rem;
+    }
+
+    .about-us p {
+        font-size: 1.1rem;
+    }
+
+    #about button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin: 5px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        margin: 5px 10px;
+        padding: 10px;
+    }
+
+    .about-text {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .about-us h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-us p {
+        font-size: 1rem;
+    }
+
+    #about button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .about-us hr {
+        width: 60%;
+    }
+}
+
+/*  responsif Layanan */
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .Services-box {
+        flex-direction: column; /* Susun elemen secara vertikal */
+        gap: 10px;
+        height: 100%;
+    }
+
+    .Services-head h2 {
+        font-size: 1.6rem;
+    }
+
+    .Services-head p {
+        font-size: 1.2rem;
+    }
+
+    .Services-box-main {
+        max-width: 100%; /* Ambil seluruh lebar layar */
+    }
+
+    .Services-text {
+        padding: 15px;
+    }
+
+    .Services-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .Services-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 480px) {
+    .Services-head h2 {
+        font-size: 1.4rem;
+    }
+
+    .Services-head p {
+        font-size: 1rem;
+    }
+
+    .Services-text img {
+        width: 50px; /* Sesuaikan ukuran gambar */
+    }
+
+    .Services-text h3 {
+        font-size: 1rem;
+    }
+
+    .Services-text p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsif Halaman Contact */
+@media (max-width: 768px) {
+    /* .contact{
+        padding-top: 20px;
+    } */
+    .contact-main {
+        grid-template-columns: 1fr; /* Stack into 1 column on smaller screens */
+        padding:  20px; /* Reduce padding */
+    }
+
+    .contact-text {
+        width: 90%; /* Make text section responsive */
+    }
+
+    .contact h2 {
+        font-size: 2.5rem; /* Adjust heading size */
+    }
+
+    #contac button {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact h2 {
+        font-size: 2rem; /* Further adjust heading size */
+    }
+
+    .contact-text {
+        width: 100%; /* Full width on very small screens */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        height: 35px; /* Adjust input height */
+    }
+
+    #contac button {
+        padding: 10px 15px; /* Further adjust button padding */
+        font-size: 0.8rem; /* Further adjust font size */
+    }
+}
+
+/* RESPONSIF FOOTER */
+@media (max-width: 768px) {
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr); /* Stack into 2 columns on smaller screens */
+        padding: 20px; /* Reduce padding */
+        margin: 0; /* Remove negative margin */
+    }
+
+    .footer-logo img {
+        width: 50%; /* Adjust logo size */
+    }
+
+    .footer-logo p {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .footer-media p, .footer-media a {
+        font-size: 24px; /* Adjust font size */
+    }
+
+    .footer-main h3 {
+        font-size: 18px; /* Adjust heading size */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-main {
+        grid-template-columns: 1fr; /* Stack into 1 column on very small screens */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .footer-logo img {
+        width: 70%; /* Adjust logo size */
+    }
+
+    .footer-logo p {
+        font-size: 1.2rem; /* Further adjust font size */
+    }
+
+    .footer-media p, .footer-media a {
+        font-size: 20px; /* Further adjust font size */
+    }
+
+    .footer-main h3 {
+        font-size: 16px; /* Further adjust heading size */
+    }
+
+    .footer-contact p {
+        font-size: 0.9rem; /* Adjust contact text size */
+    }
+}
+
+/* Peminjaman Buku */
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .book-card-borrow {
+        width: 30%; /* 3 cards per row */
+    }
+    .conteiner-borrow{
+        margin-top: 12%;
+
+    }
+}
+
+@media (max-width: 992px) {
+    .book-card-borrow {
+        width: 45%; /* 2 cards per row */
+    }
+
+    .conteiner-borrow{
+        margin-top: 16%;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .book-card-borrow {
+        width: 100%; /* 1 card per row */
+    }
+
+    .search-bar {
+        text-align: center; /* Center search bar on smaller screens */
+    }
+
+    .search-bar input[type="text"] {
+        width: 80%; /* Make input wider on smaller screens */
+        margin: 0 auto; /* Center the input */
+    }
+
+    .conteiner-borrow{
+        margin-top: 20%;
+
+    }
+}
+
+@media (max-width: 576px) {
+    .Header-Borrow h1 {
+        font-size: 24px; /* Smaller font size for smaller screens */
+    }
+
+    .Header-Borrow h2 {
+        font-size: 18px; /* Smaller font size for smaller screens */
+    }
+
+    .conteiner-borrow{
+        margin-top: 40%;
+
+    }
+}
+
+/* responsif Bukukunjungan */
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .container-Kunjungan {
+        margin: 50px 100px; /* Reduce margin on smaller screens */
+    }
+
+    #BukuKujungan {
+        padding: 30px 100px; /* Reduce padding on smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .container-Kunjungan {
+        margin: 50px 50px; /* Further reduce margin */
+    }
+
+    #BukuKujungan {
+        padding: 30px 50px; /* Further reduce padding */
+    }
+
+    #BukuKujungan form h1 {
+        font-size: 20px; /* Smaller font size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .container-Kunjungan {
+        margin: 20px; /* Use full width on very small screens */
+    }
+
+    #BukuKujungan {
+        padding: 20px; /* Reduce padding */
+    }
+
+    #BukuKujungan form {
+        padding: 20px; /* Reduce form padding */
+    }
+
+    #BukuKujungan form h1 {
+        font-size: 18px; /* Smaller font size */
+    }
+
+    #BukuKujungan form input,
+    #BukuKujungan form select {
+        height: 35px; /* Slightly smaller input/select height */
+    }
+
+    #BukuKujungan form button {
+        height: 35px; /* Slightly smaller button height */
+    }
+}
+
+@media (max-width: 576px) {
+    .body-conteiner-Kunjungan {
+        margin: 20px; /* Reduce margin for very small screens */
+    }
+
+    #BukuKujungan {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    #BukuKujungan form h1 {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    #BukuKujungan form label {
+        font-size: 12px;
+    }
+
+    #BukuKujungan form input,
+    #BukuKujungan form select {
+        height: 30px; /* Smaller input/select height */
+    }
+
+    #BukuKujungan form button {
+        height: 30px; /* Smaller button height */
+    }
+}
+
+/* Responsif halaman login */
+@media (max-width: 768px) {
+    .login-box {
+        margin-top: 20%; /* Reduce margin on smaller screens */
+        width: 90%; /* Use more width on smaller screens */
+    }
+
+    .login-box-header h2 {
+        font-size: 1.5rem; /* Smaller font size for header */
+    }
+
+    .login-box form input {
+        height: 40px; /* Keep input height consistent */
+    }
+
+    .login-box button {
+        padding: 10px 20px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 576px) {
+    .login-box {
+        margin-top: 15%; /* Further reduce margin */
+    }
+
+    .login-box-header h2 {
+        font-size: 1.2rem; /* Smaller font size for header */
+    }
+
+    .login-form p {
+        font-size: 0.7rem; /* Smaller font size for paragraph */
+    }
+}
+
+/* responsif pendaftaran */
+@media (max-width: 1200px) {
+    .header-tombol {
+        margin-inline-start: 20px; /* Reduce margin on smaller screens */
+    }
+
+    .form-pendaftaran {
+        margin: 30px -20px; /* Adjust margin for smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .header-logo p {
+        font-size: 2.5rem; /* Smaller font size for header */
+    }
+
+    .header-text h4 {
+        font-size: 1.5rem; /* Smaller font size for subheader */
+    }
+
+    .form-pendaftaran {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+
+    .form-main {
+        padding: 20px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-logo p {
+        font-size: 2rem; /* Further reduce font size */
+    }
+
+    .header-text h4 {
+        font-size: 1.3rem; /* Further reduce font size */
+    }
+
+    .form-main input {
+        height: 35px; /* Adjust input height */
+    }
+
+    .form-main button {
+        padding: 10px 20px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 576px) {
+    .header-logo p {
+        font-size: 1.5rem; /* Smaller font size for very small screens */
+    }
+
+    .header-text h4 {
+        font-size: 1.2rem; /* Smaller font size for very small screens */
+    }
+
+    .form-main label {
+        font-size: 12px; /* Smaller font size for labels */
+    }
+
+    .form-main input {
+        height: 30px; /* Smaller input height */
+    }
+
+    .form -main button {
+        padding: 8px 15px; /* Smaller button padding */
+    }
+}
+
+
+/* responsif buku cerita */
+@media (max-width: 1200px) {
+    .header-Book {
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .conteiner-book-main {
+        grid-template-columns: repeat(2, 1fr); /* Adjust grid for medium screens */
+    }
+
+    .book-info {
+        width: 100%; /* Full width for book info */
+    }
+}
+
+@media (max-width: 992px) {
+    .header-text-Book p {
+        font-size: 2rem; /* Smaller font size for header text */
+    }
+
+    .header-main-book a {
+        font-size: 1rem; /* Smaller font size for links */
+    }
+
+    .conteiner-book-main {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+
+    #conteiner-book {
+        flex-direction: column; /* Stack items vertically */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-Book {
+        padding: 10px 20px; /* Reduce padding */
+    }
+
+    .book {
+        width: 100px; /* Smaller book size */
+        height: 150px; /* Adjust height */
+    }
+
+    .book-info {
+        padding: 15px 20px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 576px) {
+    .header-text-Book p {
+        font-size: 1.5rem; /* Further reduce font size */
+    }
+
+    .conteiner-text h4 {
+        font-size: 1.2rem; /* Smaller font size for headings */
+    }
+
+    .book-info h3 {
+        font-size: 1rem; /* Smaller font size for book titles */
+    }
+
+    .book-info p {
+        font-size: 0.9rem; /* Smaller font size for book descriptions */
+    }
+}
+
+/* halaman dashboard */
+@media (max-width: 1200px) {
+    .sidebar-dashboard {
+        width: 200px; /* Adjust sidebar width */
+    }
+
+    .main-content-dashboard {
+        margin-left: 220px; /* Adjust main content margin */
+    }
+
+    .dashboard .card-dashboard {
+        width: 45%; /* Adjust card width for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar-dashboard {
+        width: 180px; /* Further adjust sidebar width */
+    }
+
+    .main-content-dashboard {
+        margin-left: 200px; /* Adjust main content margin */
+    }
+
+    .dashboard .card-dashboard {
+        width: 100%; /* Full width for cards on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-dashboard {
+        display: none; /* Hide sidebar on small screens */
+    }
+
+    .main-content-dashboard {
+        margin-left: 0; /* Remove margin for main content */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .dashboard .card-dashboard {
+        width: 100%; /* Full width for cards */
+    }
+}
+
+@media (max-width: 576px) {
+    .header-dashboard .title {
+        font-size: 16px; /* Smaller font size for header title */
+    }
+
+    .card-dashboard p {
+        font-size: 18px; /* Smaller font size for card text */
+    }
+
+    .btn-edit, .btn-delete, .btn-Print {
+        font-size: 18px; /* Smaller button font size */
+    }
+}
+
+/* data buku */
+@media (max-width: 1200px) {
+    .content-DataBuku {
+        margin: 15px; /* Reduce margin on medium screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .Tabel-Buku table th, .Tabel-Buku table td {
+        padding: 15px; /* Reduce padding for table cells */
+    }
+
+    .Tabel-Buku table td img {
+        width: 70px; /* Reduce image size */
+    }
+}
+
+@media (max-width: 992px) {
+    .content-DataBuku {
+        margin: 10px; /* Further reduce margin */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .Tabel-Buku table th, .Tabel-Buku table td {
+        padding: 10px; /* Further reduce padding for table cells */
+    }
+
+    .Tabel-Buku table td img {
+        width: 60px; /* Further reduce image size */
+    }
+
+    .btn-edit, .btn-delete {
+        font-size: 12px; /* Smaller button font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .content-DataBuku {
+        margin: 5px; /* Minimal margin for small screens */
+        padding: 5px; /* Minimal padding */
+    }
+
+    .Tabel-Buku table th, .Tabel-Buku table td {
+        padding: 5px; /* Minimal padding for table cells */
+    }
+
+    .Tabel-Buku table td img {
+        width: 50px; /* Further reduce image size */
+    }
+
+    .btn-edit, .btn-delete {
+        font-size: 10px; /* Smaller button font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .content-DataBuku {
+        margin: 0; /* Remove margin for very small screens */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .Tabel-Buku table th, .Tabel-Buku table td {
+        padding: 5px; /* Minimal padding for table cells */
+        font-size: 12px; /* Smaller font size for table text */
+    }
+
+    .Tabel-Buku table td img {
+        width: 40px; /* Further reduce image size */
+    }
+
+    .btn-edit, .btn-delete {
+        font-size: 10px; /* Smaller button font size */
+    }
+}
+
+/* data anggota */
+@media (max-width: 1200px) {
+    .content-Dataanggota {
+        margin: 15px; /* Reduce margin on medium screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .Tabel-anggota table th, .Tabel-anggota table td {
+        padding: 15px; /* Reduce padding for table cells */
+    }
+
+    .Tabel-anggota table td img {
+        width: 70px; /* Reduce image size */
+    }
+}
+
+@media (max-width: 992px) {
+    .content-Dataanggota {
+        margin: 10px; /* Further reduce margin */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .Tabel-anggota table th, .Tabel-anggota table td {
+        padding: 10px; /* Further reduce padding for table cells */
+    }
+
+    .Tabel-anggota table td img {
+        width: 60px; /* Further reduce image size */
+    }
+
+    .btn-edit, .btn-delete, .btn-Print {
+        font-size: 14px; /* Smaller button font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .content-Dataanggota {
+        margin: 5px; /* Minimal margin for small screens */
+        padding: 5px; /* Minimal padding */
+    }
+
+    .Tabel-anggota table th, .Tabel-anggota table td {
+        padding: 5px; /* Minimal padding for table cells */
+    }
+
+    .Tabel-anggota table td img {
+        width: 50px; /* Further reduce image size */
+    }
+
+    .btn-edit, .btn-delete, .btn-Print {
+        font-size: 12px; /* Smaller button font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .content-Dataanggota {
+        margin: 0; /* Remove margin for very small screens */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .Tabel-anggota table th, .Tabel-anggota table td {
+        padding: 5px; /* Minimal padding for table cells */
+        font-size: 12px; /* Smaller font size for table text */
+    }
+
+    .Tabel-anggota table td img {
+        width: 40px; /* Further reduce image size */
+    }
+
+    .btn-edit, .btn-delete, .btn-Print {
+        font-size: 10px; /* Smaller button font size */
+        padding: 3px 6px; /* Adjust padding for smaller buttons */
+    }
+}
 
 
 
