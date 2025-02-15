@@ -88,6 +88,45 @@ section{
 .navbar a:hover::after {
     width: 100%;
 }
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+
+}
+  
+.dropdown .dropbtn {
+    color: black;
+    background-color: var(--main-color);
+    box-shadow: none;
+    font-size: 1.0rem;
+    margin: 1rem;
+    padding: 0.3rem;
+    position: relative;
+    font-family: var(--p-font-family);
+}
+ 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
   
 .icons {
     display: flex;
@@ -697,7 +736,7 @@ section{
     text-align: center;
 }
 
-/* HALAMAN BUKU CERITA/PELAJARAN*/
+/* HALAMAN dashboard/PELAJARAN*/
 
 .header-Book{
     padding: 20px 35px;
@@ -885,6 +924,270 @@ section{
 
 .book:hover .book-spine {
   transform: rotateY(-30deg);
+}
+
+/* Visi Misi */
+
+.main-about {
+    min-height: 100vh;
+    padding: 4rem 7%;
+    color: var(--text-light);
+}
+  
+.main-inner-about {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+  
+.main-inner-about h1 {
+    font-size: 60px;
+    font-weight: 400;
+    font-family: var(--h1-font-family);
+    text-align: center;
+    margin: 0.5rem;
+    margin-top: 4rem;
+    color: var(--text-color);
+}
+  
+  .main-inner-about h1 span {
+    color: var(--second-bg-color);
+    font-size: 60px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: var(--h1-font-family);
+  }
+  
+  .main-inner-about h2 {
+    font-size: var(--p-font);
+    font-weight: 400;
+    font-family: var(--h2-font-family);
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+  }
+
+  .main-inner-about h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: var(--h1-font-family);
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .about-description {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    letter-spacing: 3px;
+    text-align: center;
+  }
+  
+  .history-title {
+    font-size: 60px;
+    font-weight: 400;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    margin: 2rem;
+    color: var(--text-light);
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: var(--text-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+    z-index: 0;
+  } */
+  
+  .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 50%;
+  }
+  
+  /* .timeline-item.show {
+    opacity: 1;
+    transform: translateX(0);
+  } */
+  
+  /* .timeline-item:nth-child(even).show {
+    transform: translateX(0);
+  } */
+  
+  .timeline-content {
+    padding: 20px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 3px 5px var(--text-color);
+    position: relative;
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+  
+  /* .timeline-content:hover {
+    transform: translateY(-5px);
+  }
+   */
+  /* .timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -12.5px;
+    z-index: 2;
+  }
+   */
+  /* .timeline-item:nth-child(even)::before {
+    left: -12.5px;
+  } */
+  
+  .timeline-item h3 {
+    color: var(--accent-color);
+    font-size: 2.5rem; /* Diperbesar dari 1.8rem */
+    margin-bottom: 0.5rem;
+    font-family: "Bebas Neue", Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  .timeline-item p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    letter-spacing: 3px;
+  }
+  
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+@keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+@keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+/* Struktur Organisasi */
+body #Struktur{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 70px;
+    margin-top: 120px;
+  }
+  #Struktur h2 {
+    color: var(--text-color);
+    font-family: var(--h2-font-family);
+    font-size: var(--h2-font);
+  }
+  .box-struktur {
+    border: 2px solid var(--bg-color);
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px;
+    width: 30%;
+    display: flex;
+    gap: 20px;
+    text-align: justify;
+  }
+  .staff-boxes-struktur {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .staff-box-struktur {
+    border: 2px solid var(--bg-color);
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    text-align: justify;
+  }
+  .box-struktur img {
+    width: 100px;
+    height: 120px;
+    border-radius: 10px;
+  }
+  .staff-box-struktur img {
+    width: 100px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+/* Responsif untuk layar sedang */
+@media screen and (max-width: 1024px) {
+    .box-struktur,
+    .staff-box-struktur {
+      width: 45%;
+    }
+}
+  
+  /* Responsif untuk layar kecil (ponsel) */
+@media screen and (max-width: 768px) {
+    .box-struktur,
+    .staff-box-struktur {
+      width: 80%;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  
+    .staff-boxes-struktur {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .box-struktur img,
+    .staff-box-struktur img {
+      width: 80px;
+      height: 100px;
+    }
 }
 
 /* halaman layanan */
@@ -1288,7 +1591,8 @@ section{
 
 .btn-edit, .btn-delete {
     border: none;
-    font-size: 14px;
+    font-size: 22px;
+    border-radius: 5px;
 }
 
 .btn-edit {
