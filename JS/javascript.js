@@ -88,3 +88,5 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Navbar element:", navbar);
   });
   
+  
+  

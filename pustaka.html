@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Petugas</title>
+    <style>
+        
+        .container-petugas {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .petugas-card {
+            position: relative;
+            width: 250px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .petugas-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .petugas-card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .petugas-card:hover img {
+            transform: scale(1.1);
+        }
+        .petugas-info {
+            padding: 15px;
+        }
+        .petugas-info h3 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .petugas-info p {
+            color: #777;
+        }
+        .petugas-card:active {
+            transform: scale(1.2);
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <h1>Para Petugas Kami</h1>
+    <div class="container-petugas">
+        <div class="petugas-card">
+            <img src="https://cdn2.f-cdn.com/contestentries/1440473/30778261/5bdd02db9ff4c_thumb900.jpg" alt="Chamdi Fajar">
+            <div class="petugas-info">
+                <h3>Chamdi Fajar, S.IP</h3>
+                <p>Kepala Perpustakaan</p>
+            </div>
+        </div>
+        <div class="petugas-card">
+            <img src="https://cdn2.f-cdn.com/contestentries/1440473/30778261/5bdd02db9ff4c_thumb900.jpg" alt="Chamdi Fajar">
+            <div class="petugas-info">
+                <h3>Chamdi Fajar, S.IP</h3>
+                <p>Kepala Perpustakaan</p>
+            </div>
+        </div>
+        <div class="petugas-card">
+            <img src="https://cdn2.f-cdn.com/contestentries/1440473/30778261/5bdd02db9ff4c_thumb900.jpg" alt="Chamdi Fajar">
+            <div class="petugas-info">
+                <h3>Chamdi Fajar, S.IP</h3>
+                <p>Kepala Perpustakaan</p>
+            </div>
+        </div>
+        <div class="petugas-card">
+            <img src="https://cdn2.f-cdn.com/contestentries/1440473/30778261/5bdd02db9ff4c_thumb900.jpg" alt="Chamdi Fajar">
+            <div class="petugas-info">
+                <h3>Chamdi Fajar, S.IP</h3>
+                <p>Kepala Perpustakaan</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

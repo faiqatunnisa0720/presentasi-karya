@@ -6,6 +6,16 @@
     <title>Perpustakaan al jahiz mansa library</title>
     <link rel="stylesheet" href="../CSS/style.css">
     
+    <script
+      src="https://kit.fontawesome.com/c1df782baf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="JS/javascript.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
     <!-- remix icon link -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
@@ -34,21 +44,41 @@
             <p>AL <span>JAMALY</span></p>
           </div>
         </div>
-  
+    
         <nav class="navbar">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#Services" class="nav-link">Layanan</a>
-          <a href="BukuPelajaran.html" class="nav-link">E-Pustaka</a>
+          <a href="#home" class="nav-link">Beranda</a>
+          <div class="dropdown">
+            <button class="dropbtn">Profil 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="home.html#about">Profil</a>
+                <a href="VisiMisi.html" >Visi Misi</a>
+                <a href="strukturOrganisasi.html" >Struktur Organisasi</a>
+            </div>
+        </div>
+        
+        <a href="#Services" class="nav-link">Layanan</a>
+        
+        <div class="dropdown">
+            <button class="dropbtn">E-Pustaka 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="BukuPelajaran.html" >Buku Pelajaran</a>
+                <a href="bukuCerita.html" >Buku Digital</a>
+            </div> 
+        </div>
+        
           <a href="#contac" class="nav-link">Contact</a>
         </nav>
-  
+    
         <div class="icons">
-          <div class="ordernow"><a href="login.html">Login</a></div>
+          <!-- <div class="ordernow"><a href="login.html">Login</a></div> -->
           <div id="menubar" class="fas fa-bars"></div>
         </div>
       </header>
-
+      
     <!-- halamn home -->
      <section id="home">
         <div class="tulisan">
@@ -64,7 +94,6 @@
         </div>
         
      </section>
-
     
     <!-- Halaman Tentang -->
      <section id="about">
@@ -93,6 +122,20 @@
         </div>
 
      </section>
+
+     <!-- Halaman vidio profil -->
+    <section id="Vidio-Profil">
+        <div class="main-vidio">
+            <h1>VIDEO PROFILE</h1>
+            <hr>
+            <h2>Madrasah Aliyah Negeri 1 Sinjai</h2>
+        </div>
+        
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ztIhG6LzUfA?si=iX29Bc9f1z8m_2sg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
 
      <!-- Halaman Layanan -->
       <section id="Services">
@@ -133,6 +176,45 @@
             </div>
         </div>
       </section>
+
+      <section>
+        <div id="petugas">
+            <h1>PUSTAKAWAN</h1>
+            <hr>
+            <h2>Para Petugas Kami</h2>
+            <div class="container-petugas">
+                <div class="petugas-card">
+                    <img src="img/IMG_20230324_215747_185.jpg" alt="Chamdi Fajar">
+                    <div class="petugas-info">
+                        <h3>Sri Tatik Muliana, S.Pd</h3>
+                        <p>Kepala Perpustakaan</p>
+                    </div>
+                </div>
+                <div class="petugas-card">
+                    <img src="img/IMG_20230324_215747_185.jpg" alt="Chamdi Fajar">
+                    <div class="petugas-info">
+                        <h3>Muhda Mansur S,IP</h3>
+                        <p>Layanan Pemakai</p>
+                    </div>
+                </div>
+                <div class="petugas-card">
+                    <img src="img/IMG_20230324_215747_185.jpg" alt="Chamdi Fajar">
+                    <div class="petugas-info">
+                        <h3>Yuliana Sofyan</h3>
+                        <p>Layanan Pemakai</p>
+                    </div>
+                </div>
+                <div class="petugas-card">
+                    <img src="img/IMG_20230324_215747_185.jpg" alt="Chamdi Fajar">
+                    <div class="petugas-info">
+                        <h3>Hilmawati Hilal, A.Ma.Past</h3>
+                        <p>Layanan Teknisi</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+     </section>
 
      <!-- Halman contac -->
       <section id="contac">
@@ -186,17 +268,16 @@
             <div>
                 <footer>
                     <div class="footer-main">
-                        <div class="footer-logo">
-                            <img src="../img/LogoMansa2.png" alt="Logo">
-                            <div>
-                                <p>Al-Jamaly</p>
-                            </div>
-                            
-                        </div>
+                            <img src="../img/LogoMansa2.png" alt="Logo">            
 
                         <div class="footer-media">
                             <h3>Sosial Media</h3>
-                            <p><a href=""><i class="ri-youtube-fill"></i></a><a href=""><i class="ri-instagram-fill"></i></a><a href=""><i class="ri-facebook-box-fill"></i></a><a href=""><i class="ri-tiktok-fill"></i></a></p>
+                            <p><a href="">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                            <a href=""><i class="ri-instagram-fill"></i></a>
+                            <a href=""><i class="ri-facebook-box-fill"></i></a>
+                            <a href=""><i class="ri-tiktok-fill"></i></a></p>
                         </div>
                         
                         <div class="footer-contact">
@@ -204,7 +285,8 @@
                                 <h3>Contact</h3>
                                 <p><i class="ri-phone-line">082346874142</i></p>
                                 <p><i class="ri-mail-line">man1sinjai@gmail.com</i></p>
-                                <p><i class="ri-school-line">Alamat Jalan, JL. Baronang KEL. LAPPA KEC. SINJAI UTARART</i></p>
+                                <p><i class="ri-school-line">Alamat Jalan, JL. Baronang 
+                                    <br>Kel. Lappan Kec. Sinjai Utara</i></p>
                             </div>
                         </div>
                     </div>

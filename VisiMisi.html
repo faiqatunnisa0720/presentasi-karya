@@ -31,6 +31,7 @@
     <script src="JS/javascript.js" defer></script>
 </head>
 <body>
+ 
   <header class="header">
     <div class="logo">
       <img src="img/LogoMansa1.png" alt="Coffee Shop Logo" />
@@ -40,11 +41,31 @@
     </div>
 
     <nav class="navbar">
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#Services" class="nav-link">Layanan</a>
-      <a href="BukuPelajaran.html" class="nav-link">E-Pustaka</a>
-      <a href="#contac" class="nav-link">Contact</a>
+      <a href="home.html#home">Beranda</a>
+      <div class="dropdown">
+        <button class="dropbtn">Profil 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="home.html#about">Profil</a>
+            <a href="VisiMisi.html" >Visi Misi</a>
+            <a href="strukturOrganisasi.html" >Struktur Organisasi</a>
+        </div>
+    </div>
+    
+    <a href="home.html#Services">Layanan</a>
+    
+    <div class="dropdown">
+        <button class="dropbtn">E-Pustaka 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="BukuPelajaran.html" >Buku Pelajaran</a>
+            <a href="bukuCerita.html" >Buku Digital</a>
+        </div> 
+    </div>
+    
+      <a href="home.html#contac">Contact</a>
     </nav>
 
     <div class="icons">
@@ -52,7 +73,7 @@
       <div id="menubar" class="fas fa-bars"></div>
     </div>
   </header>
-
+  
     <!-- About section -->
     <div class="main-about" id="about">
         <div class="main-inner-about">
@@ -102,21 +123,21 @@
       </div>
       <!-- About section ended -->
 
+      <!-- Halaman Footer -->
       <section id="footer">
         <div>
             <footer>
                 <div class="footer-main">
-                    <div class="footer-logo">
-                        <img src="../img/LogoMansa2.png" alt="Logo">
-                        <div>
-                            <p>Al-Jamaly</p>
-                        </div>
-                        
-                    </div>
+                        <img src="../img/LogoMansa2.png" alt="Logo">            
 
                     <div class="footer-media">
                         <h3>Sosial Media</h3>
-                        <p><a href=""><i class="ri-youtube-fill"></i></a><a href=""><i class="ri-instagram-fill"></i></a><a href=""><i class="ri-facebook-box-fill"></i></a><a href=""><i class="ri-tiktok-fill"></i></a></p>
+                        <p><a href="">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                        <a href=""><i class="ri-instagram-fill"></i></a>
+                        <a href=""><i class="ri-facebook-box-fill"></i></a>
+                        <a href=""><i class="ri-tiktok-fill"></i></a></p>
                     </div>
                     
                     <div class="footer-contact">
@@ -124,17 +145,18 @@
                             <h3>Contact</h3>
                             <p><i class="ri-phone-line">082346874142</i></p>
                             <p><i class="ri-mail-line">man1sinjai@gmail.com</i></p>
-                            <p><i class="ri-school-line">Alamat Jalan, JL. Baronang KEL. LAPPA KEC. SINJAI UTARART</i></p>
+                            <p><i class="ri-school-line">Alamat Jalan, JL. Baronang 
+                                <br>Kel. Lappan Kec. Sinjai Utara</i></p>
                         </div>
                     </div>
                 </div>
             </footer>
         </div>
         
-   </section>
-    <div  class="copyright">
-        <p> &copy 2024 Man satu Sinjai by nr_faiqtunnis</p>
-    </div>
+        </section>
+        <div  class="copyright">
+            <p> &copy 2024 Man satu Sinjai by nr_faiqtunnis</p>
+        </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
